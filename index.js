@@ -29,7 +29,7 @@ app.use(passport.session());
 authRoutes(app);
 billingRoutes(app);
 
-if (process.env.NODE_ENV !== "development") {
+if (process.env.NODE_ENV === "production") {
   // Express will serve up production assets like main.js
   app.use(express.static("client/build"));
 
@@ -41,4 +41,6 @@ if (process.env.NODE_ENV !== "development") {
 }
 
 const PORT = process.env.PORT || 5050;
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log("Server up at Port " + PORT);
+});
