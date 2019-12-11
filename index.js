@@ -40,9 +40,5 @@ if (process.env.NODE_ENV !== "development") {
   });
 }
 
-// app.get("/", (req, res) => {
-//   res.send({ hi: "there hahahahaha" });
-// });
-
 const PORT = process.env.PORT || 5050;
 app.listen(PORT);
