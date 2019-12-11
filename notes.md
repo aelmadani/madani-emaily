@@ -34,3 +34,5 @@ Steps:
 11- install and configure stripe js in client side
 12- install stripe and body parser in server side to handle charge requests
 13- Prepare Project to production. Build Process...
+
+npm install --prefix client && npm run build --prefix client &&
