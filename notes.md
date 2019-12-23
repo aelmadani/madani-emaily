@@ -12,6 +12,8 @@ npx create-react-app client
 npm install --save concurrently
 npm install --save stripe
 npm install --save body-parser
+npm install --save path-parser
+npm install --save lodash
 
 in client:
 npm install http-proxy-middleware --save
@@ -19,6 +21,9 @@ npm install --save redux react-redux react-router-dom
 npm install --save materialize-css
 npm install --save axios redux-thunk
 npm install --save react-stripe-checkout
+npm install --save sendgrid
+npm install --save redux-form@8.1.0
+npm install --save lodash
 
 Steps:
 1- set server up
@@ -34,5 +39,7 @@ Steps:
 11- install and configure stripe js in client side
 12- install stripe and body parser in server side to handle charge requests
 13- Prepare Project to production. Build Process...
+
+The rest is not MERN specific. But we used sendgrid to send mails to recipients, and we used ngrok to forward notificatons from sendgrid to localhost dev environment. And we used path-parser to extract survey id from path.
 
 npm install --prefix client && npm run build --prefix client && node index.js
